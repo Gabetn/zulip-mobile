@@ -51,11 +51,11 @@
     <key>NSCameraUsageDescription</key>
     <string>Take a photo and upload it to a Zulip realm</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-	  <string></string>
+    <string/>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>Upload photos to a Zulip realm</string>
-		<key>NSPhotoLibraryAddUsageDescription</key>
-		<string>Download photos from Zulip realm</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Download photos from Zulip realm</string>
     <key>UIAppFonts</key>
     <array>
       <string>Entypo.ttf</string>
@@ -70,10 +70,10 @@
       <string>SimpleLineIcons.ttf</string>
       <string>MaterialCommunityIcons.ttf</string>
     </array>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-	</array>
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>remote-notification</string>
+    </array>
     <key>UILaunchStoryboardName</key>
     <string>LaunchScreen</string>
     <key>UIRequiredDeviceCapabilities</key>
@@ -96,5 +96,7 @@
     </array>
     <key>UIViewControllerBasedStatusBarAppearance</key>
     <false/>
+    <key>CodePushDeploymentKey</key>
+    <string>deployment-key-here</string>
   </dict>
 </plist>

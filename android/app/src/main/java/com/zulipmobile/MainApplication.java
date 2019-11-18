@@ -3,6 +3,8 @@ package com.zulipmobile;
 import android.app.Application;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.facebook.react.ReactApplication;
+import com.microsoft.appcenter.reactnative.appcenter.AppCenterReactNativePackage;
+import com.microsoft.codepush.react.CodePush;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -28,6 +30,11 @@ public class MainApplication extends Application implements ReactApplication {
     public ConversationMap getConversations() { return conversations; }
 
     private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+    @Override
+    protected String getJSBundleFile(){
+      return CodePush.getJSBundleFile();
+    }
+
         @Override
         public boolean getUseDeveloperSupport() {
             return BuildConfig.DEBUG;
@@ -37,6 +44,8 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             return Arrays.asList(
                     new MainReactPackage(),
+            new AppCenterReactNativePackage(MainApplication.this),
+            new CodePush(getResources().getString(R.string.reactNativeCodePush_androidDeploymentKey), getApplicationContext(), BuildConfig.DEBUG),
                     new RNCWebViewPackage(),
                     new RNTextInputResetPackage(),
                     new ImagePickerPackage(),
