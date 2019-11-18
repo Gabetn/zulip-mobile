@@ -79,6 +79,7 @@ project.ext.react = [
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
 
 if (hasProperty('sentry')) {
     // Conditionally enable Sentry, because it requires an auth key.
@@ -185,6 +186,8 @@ repositories {
 }
 
 dependencies {
+    compile project(':appcenter')
+    compile project(':react-native-code-push')
     implementation project(':react-native-webview')
     implementation project(':react-native-text-input-reset')
     implementation project(':react-native-image-picker')
