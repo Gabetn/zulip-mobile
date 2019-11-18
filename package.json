@@ -33,6 +33,9 @@
   "dependencies": {
     "@expo/react-native-action-sheet": "^1.1.0",
     "@remobile/react-native-toast": "^1.0.7",
+    "appcenter": "2.6.0",
+    "appcenter-analytics": "2.6.0",
+    "appcenter-crashes": "2.6.0",
     "base-64": "^0.1.0",
     "blueimp-md5": "^2.10.0",
     "color": "^3.0.0",
