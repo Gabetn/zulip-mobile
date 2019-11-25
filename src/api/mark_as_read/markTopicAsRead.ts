@@ -1,7 +1,0 @@
-/* @flow strict-local */
-import { ApiResponse, Auth } from '../transportTypes';
-import { apiPost } from '../apiFetch';
-export default (async (auth: Auth, streamId: number, topic: string): Promise<ApiResponse> => apiPost(auth, 'mark_topic_as_read', {
-  stream_id: streamId,
-  topic_name: topic
-}));
